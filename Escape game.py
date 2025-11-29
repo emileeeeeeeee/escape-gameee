@@ -1,9 +1,9 @@
 import random
 
-def enigme1():
-    print("Enigme 1: Combien sa fais 1 + 1?")
-    answer = input("Your answer: ")
-    if answer == "3":
+def enigme1(reponse):
+    print("\n\nEnigme 1: Combien sa fais 1 + 1?")
+    answer = input("Your answer (ta réponse si t'as pas compris): ")
+    if answer == reponse:
         print("Bien joué loniiiieeeee")
         return True
     else:
@@ -12,7 +12,7 @@ def enigme1():
     
 
 def enigme2():
-    print("Ok, cette enigme va être un peu plus dure.")
+    print("\n\nOk, cette enigme va être un peu plus dure.")
     with open("nioniiiiieeeee.txt", "a") as f:
         for i in range(50):
             f.write(f"\n{random.randint(1, 1000000000000000000000000)}")
@@ -33,7 +33,7 @@ def enigme2():
     
 
 while True:
-    if enigme1():
+    if enigme1(random.choice(["1", "2", "3"])):
         if enigme2():
             print("Félicitations! Vous avez réussi toutes les énigmes.")
             input("Le tresor est dans un tiroir de ma chambre, appuie sur Entrée pour terminer le jeu.")
